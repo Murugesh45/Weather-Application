@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, rgb(162, 162, 240), white);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.head{
+  width: 300px;
+  height: 650px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px grey;
+  backdrop-filter: blur(10px);
+  background: transparent;
+  margin: 10px auto;
+  
+  
+
+}
+.city{
+ 
+  height: 30px;
+  box-shadow: 0 0 5px blue;
+  outline: none;
+  border: 2px;
+  width: 300px;
+  border-radius:20px;
+  padding: 5px;
+  transition: border .25s ease;
+  background: rgba(255, 255, 255, 0.25);
+}
+.city:focus{
+  border: 1px solid blue;
+}
+.city::placeholder{
+  font-weight: bold;
+  padding: 10px;
+}
+.city:focus {
+  background: rgba(255, 255, 255, 0.35);
+}
+.image{
+  position: relative;
+  bottom: 30px;
+  left: 270px;
+  
+  cursor: pointer;
+  transition: .5s ease-in-out;
+
+}
+.image:hover{
+  transform: scale(1.2);
+}
+.img1 {
+  margin: 10px auto;
+  transition: .5s ease-in-out;
+  animation: roll 1s linear;
+}
+
+
+
+
+h3{
+  text-align: center;
+  font-size: 40px;
+  color: red;
+  position: relative;
+  bottom: 60px;
+  text-transform: uppercase;
+}
+.data{
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  bottom: 100px;
+  
+
+}
+h2{
+  text-align: center;
+  position: relative;
+  bottom: 40px;
+  font-size: 35px;
+}
+h4{
+  position: relative;
+  bottom: 90px;
+  left: 130px;
+  font-size: 25px;
+  color: blueviolet;
+}
+.img1{
+  position: relative;
+  left: 40px;
+  animation: ani infinite linear;
+  transform-origin: left;
+}
+@keyframes ani {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.wind{
+  display: flex;
+  justify-content: space-between;
+}
+.wind1{
+  position: relative;
+  bottom: 70px;
+}
+.wind0{
+  position: relative;
+  top: 10px;
+  left: 5px;
+  height: 25px;
+  color: black;
+  
+}
+
+  
+
+.heat{
+  position: relative;
+  top: 7px;
+  left: 5px;
+
+}
+.wind1 p{
+  text-shadow: 1px 1px 1px ;
+}
+.wind1{
+  font-size: 20px;
+}
+.error{
+  color: red;
+  position: relative;
+  bottom: 30px;
+  left: 10px;
+  
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.city-button {
+  padding: 8px 16px;
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.city-button:hover {
+  background-color: #283593;
+}
