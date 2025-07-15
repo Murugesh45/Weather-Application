@@ -2,9 +2,11 @@ import axios from "axios"
 import search from "./assets/search.png"
 import sun from "./assets/sun.png"
 import {useState} from "react"
-import sky from "./assets/download.jpeg"
-import wind1 from "./assets/wind1.png"
-import heat from "./assets/heat.png"
+
+import wind1 from "./assets/1.png"
+import humdity1 from "./assets/2.png"
+import sky from"./assets/bg.mp4"
+
 import "./App.css"
 import { useEffect } from "react"
 
@@ -74,12 +76,17 @@ const changeData=(e)=>{
   
 return (
   <div>
-  <div className="head">
+    <div className="video">
+    <video src={sky} autoPlay muted loop ></video></div>
+    
+<div className="head">
+  
+
     <div className="container">
     <div className="input-conatiner">
     
     <input type="text" onChange={cityName} onKeyDown={changeData} placeholder="Enter a city name"className="city"/>
-    <img src={search} onClick={data} height="20px" className="image"/>
+    <img src={search} onClick={data} height="25px" className="image"/>
     <div className="error"><p>{error}</p></div>
     </div>
    </div>
@@ -93,23 +100,14 @@ return (
       <div className="data2"><p>latitude</p>{lat}</div>
     </div>
     <div className="wind">
-     <div className="wind1"> <p >Windspeed <img src={wind1} className="wind0"/></p>{wind} km/h</div>
-     <div className="wind1"><p>Humidity<img src={heat}  className="heat"/></p>{humidity}%</div>
+     <div className="wind1">
+       <p >Windspeed </p>{wind} km/h</div>
+     <div className="wind1"><p>Humidity</p>{humidity}%</div>
     </div>
+       </div>
+</div>
 
-   </div>
-
-   
-
-  </div>
-  
-  
-    
-    
-   
-  
-
-  )
+   )
 
 }
 export default App
