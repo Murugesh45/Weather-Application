@@ -1,6 +1,6 @@
 import axios from "axios"
 import search from "./assets/search.png"
-import sun from "./assets/sun.png"
+import sun from "./assets/clear-day.svg"
 import {useState} from "react"
 
 import wind1 from "./assets/1.png"
@@ -90,7 +90,7 @@ return (
     <div className="error"><p>{error}</p></div>
     </div>
    </div>
-     <img src={sun} height="150px" className="img1"/>
+     <img src={sun} height="250px" className="img1"/>
      <h2>{temp}<sup>o</sup>C</h2>
    
     <h3>{weather.name}</h3>
