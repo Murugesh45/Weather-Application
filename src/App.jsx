@@ -3,8 +3,8 @@ import search from "./assets/search.png"
 import sun from "./assets/clear-day.svg"
 import {useState} from "react"
 
-import wind1 from "./assets/1.png"
-import humdity1 from "./assets/2.png"
+import wind1 from "./assets/wind.svg"
+import humdity1 from "./assets/humidity.png"
 import sky from"./assets/bg.mp4"
 
 import "./App.css"
@@ -101,8 +101,10 @@ return (
     </div>
     <div className="wind">
      <div className="wind1">
+      <img src={wind1} height="75px" />
        <p >Windspeed </p>{wind} km/h</div>
-     <div className="wind1"><p>Humidity</p>{humidity}%</div>
+     <div className="wind1">
+       <img src={humdity1} height="75px" /><p>Humidity</p>{humidity}%</div>
     </div>
        </div>
 </div>
