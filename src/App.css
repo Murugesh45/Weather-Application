@@ -14,30 +14,31 @@ body {
   object-fit: cover;
   top:0;
   left: 0;
+  
 }
 .head{
   box-shadow: 0 0 10px;
   padding: 20px;
   width: 300px;
-  height: 750px;
-  
+  height: 650px;
   margin: 10px auto;
   border-radius: 12px;
+  backdrop-filter: blur(5px);
+  
 }
 .city{
   width: 100%;
   font-size: 1.2rem;
   border-radius: 20px;
-  padding: 10px 5px;
+  padding: 12px 5px;
   border: none;
   outline: none;
-  color:white;
-  background: rgb(245, 235, 235);
+  color:black;
+ 
   
 }
 .city:focus{
-  background: rgb(159, 154, 154);
-  border: 2px solid blue;
+  box-shadow: 0 0 20px blue;
 }
 .city::placeholder{
   font-size: 1.1rem;
@@ -47,39 +48,47 @@ body {
   position:relative;
   bottom: 35px;
   left: 275px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+}
+.image:hover{
+  transform: scale(1.2);
 }
 .img1{
-  margin-left: 70px;
-  
+  margin-left: 75px;
+}
+.article{
+  position: relative;
+  bottom: 100px;
+}
+h2{
+  text-align: center;
+  font-size: 35px;
+  color: red;
+  text-shadow: 5px 5px 5px black;
+
 }
 h3{
   text-align: center;
   text-transform: uppercase;
-  font-size: 1.8rem;
-  letter-spacing: 2px;
-  color: red;
-  position: relative;
-  bottom: 120px;
-}
-h2{
-  text-align: center;
-  font-size: 1.8rem;
-  position: relative;
-  bottom: 110px;
+  font-size: 30px;
+  color: orange;
+   position: relative;
+  bottom:10px;
 }
 h4{
   text-align: center;
-  color: blue;
-  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 10px;
+  font-size: 20px;
   position: relative;
-  bottom: 150px;
-  
+  bottom:30px;
 }
+
 .data, .wind{
   display: flex;
 justify-content: space-evenly;
-position: relative;
-  bottom: 150px;
+
 }
 .data1,.data2{
   box-shadow: 0 0 10px;
@@ -87,7 +96,7 @@ position: relative;
   padding: 10px 30px;
   border-radius: 12px;
   font-weight: bolder;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   
   
 }
@@ -101,7 +110,7 @@ position: relative;
 
 }
 .error{
-  color: red;
+  color: black;
   position: relative;
   bottom: 40px;
   left: 10px;

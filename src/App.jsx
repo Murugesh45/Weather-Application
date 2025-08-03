@@ -1,21 +1,12 @@
 import axios from "axios"
 import search from "./assets/search.png"
-import sun from "./assets/clear-day.svg"
 import {useState} from "react"
-
-import wind1 from "./assets/wind.svg"
-import humdity1 from "./assets/humidity.png"
 import sky from"./assets/bg.mp4"
-
 import "./App.css"
 import { useEffect } from "react"
+import sun from"./assets/clear-day.svg"
 
 const key= "fd278f55637a6401fdb32a638acf1a33" ;
-
-
-
-
-
 
 const App=()=> {
   const[weather,setWeather]=useState("")
@@ -28,9 +19,7 @@ const App=()=> {
   const[humidity,setHumidity]=useState()
   const[error,setError]=useState("")
 
-
-   
-  const data=()=>{
+   const data=()=>{
   const fetchWeather=  axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=Metric`)
   fetchWeather.then((res)=>{
     console.log(res.data)
@@ -62,18 +51,6 @@ const changeData=(e)=>{
     data()
   }
 }
-
-
-
-
-
-
-    
-   
-
-  
-  
-  
 return (
   <div>
     <div className="video">
@@ -90,10 +67,10 @@ return (
     <div className="error"><p>{error}</p></div>
     </div>
    </div>
-     <img src={sun} height="250px" className="img1"/>
-     <h2>{temp}<sup>o</sup>C</h2>
-   
-    <h3>{weather.name}</h3>
+  <img src={sun} width="250px"  className="img1"/>
+  <div className="article">
+       <h2>{temp}<sup>o</sup>C</h2>
+     <h3>{weather.name}</h3>
     <h4>{country}</h4>
     <div className="data"> 
       <div className="data1"><p>longitude</p>{lon}</div>
@@ -101,11 +78,11 @@ return (
     </div>
     <div className="wind">
      <div className="wind1">
-      <img src={wind1} height="75px" />
        <p >Windspeed </p>{wind} km/h</div>
      <div className="wind1">
-       <img src={humdity1} height="75px" /><p>Humidity</p>{humidity}%</div>
+       <p>Humidity</p>{humidity}%</div>
     </div>
+       </div>
        </div>
 </div>
 
